@@ -184,7 +184,7 @@ fn attachments_to_format(attachments: &[serenity::Attachment]) -> Option<&'stati
 
     let extension = attachments.first()?.filename.split('.').last()?;
     match extension {
-        "bmp" | "gif" | "ico" | "png" | "psd" | "svg" | "jpg" => Some("an image file"),
+        "bmp" | "gif" | "ico" | "png" | "psd" | "svg" | "jpg" | "webp" => Some("an image file"),
         "mid" | "midi" | "mp3" | "ogg" | "wav" | "wma" => Some("an audio file"),
         "avi" | "mp4" | "wmv" | "m4v" | "mpg" | "mpeg" => Some("a video file"),
         "zip" | "7z" | "rar" | "gz" | "xz" => Some("a compressed file"),
